@@ -1,0 +1,356 @@
+$ git show
+commit cc1f399df59b76971b3ca15eebb9319178aa2562 (HEAD -> master)
+Author: Bob <hallo@example.com>
+Date:   Mon May 13 11:16:12 2024 +0200
+
+    dritter Commit von vscode
+
+diff --git a/hallo.py b/hallo.py
+index 2421ef8..2a5830f 100644
+--- a/hallo.py
++++ b/hallo.py
+@@ -2,3 +2,4 @@ x = 3
+ y = 42
+ # git config --global user.email "hallo@example.com"
+ # git config --global user.name "Bob"
++z = 33
+
+Administrator@data MINGW64 ~/wbs_python_kurs/gui/tag_4/git_example (master)
+$ git log
+commit cc1f399df59b76971b3ca15eebb9319178aa2562 (HEAD -> master)
+Author: Bob <hallo@example.com>
+Date:   Mon May 13 11:16:12 2024 +0200
+
+    dritter Commit von vscode
+
+commit ba60dfedc72e0457dfc0500ab6d801a04c5f74e8
+Author: Bob <hallo@example.com>
+Date:   Mon May 13 11:07:03 2024 +0200
+
+    zweiter Commit
+
+commit d129e958891edbdb31c09ab09de17df74016a3b7
+Author: Bob <hallo@example.com>
+Date:   Mon May 13 10:58:04 2024 +0200
+
+    Datei hallo.py wurde implementiert
+
+Administrator@data MINGW64 ~/wbs_python_kurs/gui/tag_4/git_example (master)
+$ git log --help
+
+Administrator@data MINGW64 ~/wbs_python_kurs/gui/tag_4/git_example (master)
+$ git log
+commit cc1f399df59b76971b3ca15eebb9319178aa2562 (HEAD -> master)
+Author: Bob <hallo@example.com>
+Date:   Mon May 13 11:16:12 2024 +0200
+
+    dritter Commit von vscode
+
+commit ba60dfedc72e0457dfc0500ab6d801a04c5f74e8
+Author: Bob <hallo@example.com>
+Date:   Mon May 13 11:07:03 2024 +0200
+
+    zweiter Commit
+
+commit d129e958891edbdb31c09ab09de17df74016a3b7
+Author: Bob <hallo@example.com>
+Date:   Mon May 13 10:58:04 2024 +0200
+
+    Datei hallo.py wurde implementiert
+
+Administrator@data MINGW64 ~/wbs_python_kurs/gui/tag_4/git_example (master)
+$ git show --help
+
+Administrator@data MINGW64 ~/wbs_python_kurs/gui/tag_4/git_example (master)
+$ git log
+commit cc1f399df59b76971b3ca15eebb9319178aa2562 (HEAD -> master)
+Author: Bob <hallo@example.com>
+Date:   Mon May 13 11:16:12 2024 +0200
+
+    dritter Commit von vscode
+
+commit ba60dfedc72e0457dfc0500ab6d801a04c5f74e8
+Author: Bob <hallo@example.com>
+Date:   Mon May 13 11:07:03 2024 +0200
+
+    zweiter Commit
+
+commit d129e958891edbdb31c09ab09de17df74016a3b7
+Author: Bob <hallo@example.com>
+Date:   Mon May 13 10:58:04 2024 +0200
+
+    Datei hallo.py wurde implementiert
+
+Administrator@data MINGW64 ~/wbs_python_kurs/gui/tag_4/git_example (master)
+$ git remote add origin https://github.com/zorcexe/hello.git
+
+Administrator@data MINGW64 ~/wbs_python_kurs/gui/tag_4/git_example (master)
+$ git branch -M main
+
+Administrator@data MINGW64 ~/wbs_python_kurs/gui/tag_4/git_example (main)
+$ git push -u origin main
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (9/9), 727 bytes | 727.00 KiB/s, done.
+Total 9 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/zorcexe/hello.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+Administrator@data MINGW64 ~/wbs_python_kurs/gui/tag_4/git_example (main)
+$ git pull
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 945 bytes | 78.00 KiB/s, done.
+From https://github.com/zorcexe/hello
+   cc1f399..e9ebd62  main       -> origin/main
+Updating cc1f399..e9ebd62
+Fast-forward
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 README.md
+
+Administrator@data MINGW64 ~/wbs_python_kurs/gui/tag_4/git_example (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hallo.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Administrator@data MINGW64 ~/wbs_python_kurs/gui/tag_4/git_example (main)
+$ git log
+commit e9ebd62c103920c08d472f1697d9ac9aa44df80a (HEAD -> main, origin/main)
+Author: zorcexe <zorc@spielprinzip.com>
+Date:   Mon May 13 12:03:11 2024 +0200
+
+    Create README.md
+
+commit cc1f399df59b76971b3ca15eebb9319178aa2562
+Author: Bob <hallo@example.com>
+Date:   Mon May 13 11:16:12 2024 +0200
+
+    dritter Commit von vscode
+
+commit ba60dfedc72e0457dfc0500ab6d801a04c5f74e8
+Author: Bob <hallo@example.com>
+Date:   Mon May 13 11:07:03 2024 +0200
+
+    zweiter Commit
+
+commit d129e958891edbdb31c09ab09de17df74016a3b7
+Author: Bob <hallo@example.com>
+Date:   Mon May 13 10:58:04 2024 +0200
+
+    Datei hallo.py wurde implementiert
+
+Administrator@data MINGW64 ~/wbs_python_kurs/gui/tag_4/git_example (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hallo.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Administrator@data MINGW64 ~/wbs_python_kurs/gui/tag_4/git_example (main)
+$ git show
+commit e9ebd62c103920c08d472f1697d9ac9aa44df80a (HEAD -> main, origin/main)
+Author: zorcexe <zorc@spielprinzip.com>
+Date:   Mon May 13 12:03:11 2024 +0200
+
+    Create README.md
+
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..f8f6ddf
+--- /dev/null
++++ b/README.md
+@@ -0,0 +1,2 @@
++# Reademe
++angelegt auf github
+
+Administrator@data MINGW64 ~/wbs_python_kurs/gui/tag_4/git_example (main)
+$ git diff
+diff --git a/hallo.py b/hallo.py
+index 2a5830f..c0244c9 100644
+--- a/hallo.py
++++ b/hallo.py
+@@ -2,4 +2,6 @@ x = 3
+ y = 42
+ # git config --global user.email "hallo@example.com"
+ # git config --global user.name "Bob"
++
++# git config --global http.proxy http://proxywbs:3128
+ z = 33
+
+Administrator@data MINGW64 ~/wbs_python_kurs/gui/tag_4/git_example (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hallo.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Administrator@data MINGW64 ~/wbs_python_kurs/gui/tag_4/git_example (main)
+$ git add .
+
+Administrator@data MINGW64 ~/wbs_python_kurs/gui/tag_4/git_example (main)
+$ git commit -m "hallo geändert, proxy eingefügt"
+[main d77a7bc] hallo geändert, proxy eingefügt
+ 1 file changed, 2 insertions(+)
+
+Administrator@data MINGW64 ~/wbs_python_kurs/gui/tag_4/git_example (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 351 bytes | 351.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/zorcexe/hello.git
+   e9ebd62..d77a7bc  main -> main
+
+Administrator@data MINGW64 ~/wbs_python_kurs/gui/tag_4/git_example (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Administrator@data MINGW64 ~/wbs_python_kurs/gui/tag_4/git_example (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Administrator@data MINGW64 ~/wbs_python_kurs/gui/tag_4/git_example (main)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 967 bytes | 74.00 KiB/s, done.
+From https://github.com/zorcexe/hello
+   d77a7bc..7d400cf  main       -> origin/main
+error: Your local changes to the following files would be overwritten by merge:
+        hallo.py
+Please commit your changes or stash them before you merge.
+Aborting
+Updating d77a7bc..7d400cf
+
+Administrator@data MINGW64 ~/wbs_python_kurs/gui/tag_4/git_example (main)
+$ git add .
+
+Administrator@data MINGW64 ~/wbs_python_kurs/gui/tag_4/git_example (main)
+$ git commit -m "change in x local"
+[main 5688474] change in x local
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Administrator@data MINGW64 ~/wbs_python_kurs/gui/tag_4/git_example (main)
+$ git pull
+Auto-merging hallo.py
+CONFLICT (content): Merge conflict in hallo.py
+Automatic merge failed; fix conflicts and then commit the result.
+
+Administrator@data MINGW64 ~/wbs_python_kurs/gui/tag_4/git_example (main|MERGING)
+$ git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   hallo.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Administrator@data MINGW64 ~/wbs_python_kurs/gui/tag_4/git_example (main|MERGING)
+$ git add .
+
+Administrator@data MINGW64 ~/wbs_python_kurs/gui/tag_4/git_example (main|MERGING)
+$ git commit -m "merge"
+[main 3c909d6] merge
+
+Administrator@data MINGW64 ~/wbs_python_kurs/gui/tag_4/git_example (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Administrator@data MINGW64 ~/wbs_python_kurs/gui/tag_4/git_example (main)
+$ git push
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 487 bytes | 487.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/zorcexe/hello.git
+   7d400cf..3c909d6  main -> main
+
+Administrator@data MINGW64 ~/wbs_python_kurs/gui/tag_4/git_example (main)
+$ cd ..
+
+Administrator@data MINGW64 ~/wbs_python_kurs/gui/tag_4
+$ ls
+0_abstract_base_class.py  1_abc_discounts.py  2_protocol_example.py  git_example/
+
+Administrator@data MINGW64 ~/wbs_python_kurs/gui/tag_4
+$ cd ..
+
+Administrator@data MINGW64 ~/wbs_python_kurs/gui
+$ cd ..
+
+Administrator@data MINGW64 ~/wbs_python_kurs
+$ ls
+env/  funktionen_und_module/  gui/  programmiersprache_python/  setup.cfg
+
+Administrator@data MINGW64 ~/wbs_python_kurs
+$ ls
+env/  funktionen_und_module/  gui/  programmiersprache_python/  setup.cfg
+
+Administrator@data MINGW64 ~/wbs_python_kurs
+$ git init
+Initialized empty Git repository in C:/Users/Administrator/wbs_python_kurs/.git/
+
+Administrator@data MINGW64 ~/wbs_python_kurs (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        funktionen_und_module/
+        gui/
+        programmiersprache_python/
+        setup.cfg
+
